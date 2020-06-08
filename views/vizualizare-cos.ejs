@@ -1,0 +1,25 @@
+
+<%if(user!=undefined){%>
+    <h4 class="login">Log in as <%=user%>
+        <a style="color: red;" href="/logout">Delogare</a>
+    </h4>
+    <h3>
+        Produse adaugate
+    </h3>
+    <section class="row">
+        <% productsSelected.forEach(function(product){%>
+    
+            <div class="column">
+                <h5>
+                    <%= product.name%>
+                </h5>
+                <img src="<%=product.image%>" alt="no image" width="100px" height="100px">
+                <h3><b><%=product.price%></b></h3>
+                
+                
+            </div>
+            
+        <%});%>
+    </section>
+
+<%}%>

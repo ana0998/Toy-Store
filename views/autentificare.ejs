@@ -1,0 +1,23 @@
+
+<%if(eroare != null){%>
+    <h2 style="color:red"><%=eroare%></h2>
+<%}%>
+<%if(utilLogat != null){%>
+    <h4 class="login">
+        Logat ca <%=utilLogat%>
+    </h4>
+<%}%>
+    <form method="POST" action="/verificare-autentificare" >
+
+        <input type="text" name="username" placeholder="Username"/>
+        <input type="password" name="pass" placeholder="Password"/>
+    
+        <button type="submit">Autentificare</button>
+    </form>
+    
+
+
+
+    
+    
+   

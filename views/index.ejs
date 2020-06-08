@@ -1,0 +1,71 @@
+
+<% if (user==undefined) {%>
+    <a href="/autentificare">Autentificare</a>
+    <section class="row">
+
+        <% items.forEach(function(item) {%>
+            <div class="column">
+                <h5>
+                    <%= item.name%>
+                </h5>
+                <h3><b><%=item.price%></b></h3>
+                <img src="<%=item.image%>" alt="no image" width="100px" height="100px">
+                <form action="/adaugare-cos" method="POST">
+                    <input type="hidden" name="id" value="<%=item._id%>">
+                </form>
+                
+            </div>
+            
+           
+       <%});%>
+    </section>
+    <br/>
+    <form action="/creare-bd" method="GET">
+        <button type="submit">Creare BD</button>
+    </form>
+    
+    <form action="/inserare-bd" method="GET">
+        <button type="submit">Încărcare BD</button>
+    </form>
+<%}else{%>
+    <h4 class="login">Log in as <%=user%>
+        <a style="color: red;" href="/logout">Delogare</a>
+    </h4>
+    <br/>
+    <h2>Bine ai venit, <%= user%></h2>
+    
+    <section class="row">
+
+        <% items.forEach(function(item) {%>
+            <div class="column">
+                <h5>
+                    <%= item.name%>
+                </h5>
+                <h3><b><%=item.price%></b></h3>
+                <img src="<%=item.image%>" alt="no image" width="100px" height="100px">
+                <form action="/adaugare-cos" method="POST">
+                    <input type="hidden" name="id" value="<%=item._id%>">
+                    <button type="submit">Adaugă în coș</button>
+                </form>
+                
+            </div>
+            
+           
+       <%});%>
+    </section>
+
+    <form action="/vizualizare-cos" method="GET">
+        <button type="submit">Vizualizare Coș</button>
+    </form>
+   
+    <br/>
+    <form action="/creare-bd" method="GET">
+        <button type="submit">Creare BD</button>
+    </form>
+    
+    <form action="/inserare-bd" method="GET">
+        <button type="submit">Încărcare BD</button>
+    </form>
+    
+<%}%>
+

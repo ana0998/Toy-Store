@@ -1,0 +1,23 @@
+[
+    {
+    "intrebare": "What dolls called 'the only girls with a passion for fashion' were introduced in 2001?",
+    "variante": ["Trollz", "Bratz", "Disney Princess Collection", "American Girl"],
+    "corect": 1
+    },
+    {
+        "intrebare": "What bears teach about caring for others and sharing your feelings?",
+        "variante": ["Teddy Bears", "Care Bears", "Fozzie The Bear", "Smoky The Bear"],
+        "corect": 1
+    },
+    {
+        "intrebare": "What action figures can change from one thing to another?",
+        "variante": ["Transformes", "Gl Joe", "He-Man", "Star Wars"],
+        "corect": 0
+    },
+    {
+        "intrebare": "What does Good Luck Bear of the 'Care Bears' have on his tummy?",
+        "variante": ["Rainbow", "Heart", "Four-Leaf Clover", "Pot of Gold"],
+        "corect": 2
+    }
+
+]

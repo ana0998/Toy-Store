@@ -1,0 +1,24 @@
+<%if(typeUser === 'ADMIN'){%>
+    <h3>Adauga un alt produs</h3>
+    <h4 class="login">
+        Logat ca <%=user%>
+        <a style="color: red;" href="/logout">Delogare</a>
+    </h4>
+    <form action="/admin" method="post">
+    
+        <label for="produsName">Produs Name:</label>
+        <input type="text" name="produsName" placeholder="Produs Name"/>
+        <br/>
+        <label for="produsPrice">Price:</label>
+        <input type="text" name="produsPrice" placeholder="Produs Price"/>
+        <br/>
+        <label for="produsImage">Image:</label>
+        <input type="text" name="produsImage" placeholder="/images/image.jpg"/>
+        <br/>
+        <button type="submit">Add Produs</button>
+    </form>
+<%}else{%>
+
+    <h3>Accesul permis doar pentru ADMIN</h3>
+<%}%>
+
